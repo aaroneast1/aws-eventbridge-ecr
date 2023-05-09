@@ -14,7 +14,7 @@ module "eventbridge" {
   rules = {
     events = {
       description   = "Capture all created service events",
-      event_pattern = jsonencode({ "source" : ["aws.ecr"] })
+      event_pattern = jsonencode({ "source" : ["aws.ecr","aws.ecs"] })
     }
   }
 
